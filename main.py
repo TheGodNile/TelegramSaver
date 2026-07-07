@@ -32,6 +32,9 @@ app = Application.builder().token(BOT_TOKEN).build()
 
 app.add_handler(MessageHandler(filters.ALL, save))
 
+import asyncio
+
 print("Bot is running...")
 
+asyncio.set_event_loop(asyncio.new_event_loop())
 app.run_polling()
